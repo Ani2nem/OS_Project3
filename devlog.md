@@ -68,4 +68,29 @@ The project spec has all these details about how the data should be stored in bl
 
 I'm not going to worry about the actual B-tree operations yet, just getting the file format stuff working first. It'll be a bunch of pass functions, I'll get back to impolementation later, I got class soon. 
 
+### Progress So Far
+Finished implementing the BTreeNode class and the file operations. Here's what I got down in code:
 
+1. Created the BTreeNode class:
+   - It has fields for block_id, parent_id, num_keys, keys, values, and children
+   - Added to_bytes() method to convert a node to the specified byte format
+   - Added from_bytes() class method to create a node from bytes
+
+2. Implemented file operations:
+   - read_header: Reads and validates the header, returns root_id and next_block_id
+   - write_header: Updates the header in the file
+   - read_node: Reads a node from the file given its block ID
+   - write_node: Writes a node back to the file
+
+The tricky part was getting all the byte packing right. I'm using struct.pack_into and struct.unpack_from with the '>Q' format to handle 8-byte big-endian integers as specified in the project.
+
+Did some basic testing and it looks like the file operations are working correctly. I can create a file, read its header, and the magic number all look solid.
+
+
+### Next Steps
+For my next session:
+1. Implement the actual B-tree operations (insert and search)
+2. Add the remaining command-line options
+3. Figure out how to manage the "3 nodes in memory" restriction
+
+The B-tree operations are going to be the hard part. I need to make sure I understand how B-trees work before I start coding that part.
