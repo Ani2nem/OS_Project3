@@ -27,3 +27,23 @@ Today I'll try to:
 The byte order stuff looks like a pain, and I'm not really sure how the B-tree is supposed to work exactly. That's probably going to be the hardest part.
 
 Just gotta put some code on, so I can figure stuff out as I go. 
+
+
+### Progress So Far
+Got the basic structure of my program set up. Started with implementing the 'create' command since it seemed like the simplest one to get working first. The create command:
+1. Checks if the file already exists (and errors if it does)
+2. Creates a 512-byte header block with:
+   - The magic number "4348PRJ3"
+   - Root node ID (0 for empty tree)
+   - Next block ID (1, since header is block 0)
+3. Writes this header to a new file
+
+Tested it and it seems to create files correctly. The command line interface is basic but working.
+
+### Next Steps
+For my next session, I'll implement:
+1. The BTreeNode class to represent nodes in the B-tree
+2. Basic file operations for reading/writing nodes
+3. The 'insert' command to add key/value pairs to the index
+
+I'm still not entirely sure how to implement the B-tree operations efficiently while keeping only 3 nodes in memory at a time. Need to think more about this.
