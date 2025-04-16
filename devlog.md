@@ -47,3 +47,25 @@ For my next session, I'll implement:
 3. The 'insert' command to add key/value pairs to the index
 
 I'm still not entirely sure how to implement the B-tree operations efficiently while keeping only 3 nodes in memory at a time. Need to think more about this.
+
+
+
+
+## April 16, 2025 - 2:00 pm
+
+### Thoughts So Far
+I've been thinking about how to implement this B-tree thing. From what I can tell, I need a way to represent the nodes and handle reading/writing them to the file. The tricky part is going to be making sure I don't have more than 3 nodes in memory at once.
+
+I think I'll start by creating a BTreeNode class that can convert between the memory representation and the byte representation for storage. Then I'll add functions to read and write those nodes to the file.
+
+The project spec has all these details about how the data should be stored in blocks, like how the first 8 bytes are the block ID, the next 8 bytes are the parent ID, and so on. I'll need to make sure I follow that format exactly.
+
+### Plan for this Session
+1. Implement the BTreeNode class that can convert to/from bytes
+2. Add functions to read and write the header
+3. Add functions to read and write nodes
+4. Test these functions to make sure they work correctly
+
+I'm not going to worry about the actual B-tree operations yet, just getting the file format stuff working first. It'll be a bunch of pass functions, I'll get back to impolementation later, I got class soon. 
+
+
