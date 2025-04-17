@@ -94,3 +94,26 @@ For my next session:
 3. Figure out how to manage the "3 nodes in memory" restriction
 
 The B-tree operations are going to be the hard part. I need to make sure I understand how B-trees work before I start coding that part.
+
+
+
+## April 17, 2025 - 10:30 am
+
+### Thoughts So Far
+I've been reviewing B-tree algorithms since last session. The basic operations are:
+
+Searching which is - Start from root, binary search within a node to find key or the child where it would be
+Inserting which is - Find where the key should go, insert it, and split nodes if they get too full
+Deleting which is - Find the key, remove it and rebalance if needed (though we don't need to implement delete)
+
+The tricky part is implementing this with only 3 nodes in memory at a time. I'll need to be careful about loading and unloading nodes from disk.
+
+## Plan for this Session
+Implementing the B-tree search operation
+Implementing the B-tree insert operation (including node splitting)
+Making sure these operations work with the "3 nodes in memory" restriction
+Adding the search and insert commands to the CLI
+
+I think the search operation will be simpler to implement first, so I'll start with that. Then I'll tackle the insert operation, which is harder because it needs to handle node splitting when a node gets full.
+
+
