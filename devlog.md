@@ -117,3 +117,35 @@ Adding the search and insert commands to the CLI
 I think the search operation will be simpler to implement first, so I'll start with that. Then I'll tackle the insert operation, which is harder because it needs to handle node splitting when a node gets full.
 
 
+## Progress So Far
+
+Everything's mostly done. 
+
+For the load command: Python's csv module is a lifesaver. Just read in the file line by line, convert stuff to ints, and call my insert function. Added some error handling for bad files and data that can't be converted to numbers. Already had most of the hard stuff done since insert was working.
+
+For printing, Had to write this recursive inorder traversal thing. Start at the root, recurse on the left children, print the current node's keys, then recurse on the right children. Makes everything come out in sorted order. Only tricky part was making sure I wasn't loading too many nodes into memory at once.
+
+Extract was basically the same as print but writing to a file instead of the screen. Reused most of the same code.
+
+Fixed up the command line interfacee to handle all the commands properly. Added a bunch of error messages so when someone does something stupid, they at least know what they did wrong.
+
+Hit some weird bugs along the way:
+
+Had this issue where the traverse function wasn't handling leaf nodes right
+Found a dumb bug in my split_child where I wasn't zeroing out the keys after splitting
+Had to fix some edge cases with empty trees
+
+Seems solid now though. Tested a bunch of different cases and it all works
+
+
+## Next Steps
+
+Getting close to the finish line! I just need to:
+
+Test a bit more, especially edge cases
+Clean up all my sloppy code and add some comments
+Write a readme so the TA knows how to use this thing
+Double-check the project requirements
+Submit and pray for a good grade (Please give me a good grade)
+
+Pretty happy with how this turned out, honestly. B-trees are a pain but kinda cool once you get them working.
