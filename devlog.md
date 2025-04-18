@@ -149,3 +149,41 @@ Double-check the project requirements
 Submit and pray for a good grade (Please give me a good grade)
 
 Pretty happy with how this turned out, honestly. B-trees are a pain but kinda cool once you get them working.
+
+
+
+## April 18, 2025 - 10:30 am
+
+### Thoughts So Far
+Program's basically done! Got all the commands working, and the B-tree stuff seems solid. Just need to finish testing everything, make sure the README is good, and submit this thing.
+
+### Plan for this Session
+
+Test all the commands one more time
+Check edge cases (empty trees, node splitting, etc.)
+Finish the README
+Double-check project requirements
+Submit proj
+
+### Progress So Far
+Spent the morning testing everything:
+
+Basic stuff works (create, insert, search)
+Edge cases pass (empty trees, node splitting)
+CSV loading/extracting works great
+Error messages show up when they should
+
+README's done! Made it clear how to run everything and what each command does. I think the TA will be able to figure it out pretty easily.
+Checked against the project requirements:
+
+All the required commands work
+B-tree with degree 10 is done correctly
+File format has 512-byte blocks
+Never more than 3 nodes in memory (thanks to my NodeCache)
+Error handling is also pretty solid after I tested it
+Finished the README and devlog so TA can follow
+
+Pretty happy with how this turned out! The B-tree stuff was definitely the hardest part, especially with that 3-node memory limit. But I think my solution is solid.
+
+This is the link to the github page:
+`https://github.com/Ani2nem/OS_Project3`
